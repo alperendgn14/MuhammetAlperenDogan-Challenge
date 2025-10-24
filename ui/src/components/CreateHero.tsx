@@ -21,7 +21,7 @@ export function CreateHero({ refreshKey, setRefreshKey }: RefreshProps) {
     
     setIsCreating(true);
     
-    const tx = createHero(packageId, name, imageUrl, power);
+    const tx = createHero(String(packageId), name, imageUrl, power);
     signAndExecute(
       { transaction: tx },
       {

@@ -74,7 +74,7 @@ export default function SharedObjects({ refreshKey, setRefreshKey }: RefreshProp
     
     setIsBuying(prev => ({ ...prev, [listHeroId]: true }));
     
-    const tx = buyHero(packageId, listHeroId, price);
+    const tx = buyHero(String(packageId), listHeroId, price);
     signAndExecute(
       { transaction: tx },
       {
@@ -102,7 +102,7 @@ export default function SharedObjects({ refreshKey, setRefreshKey }: RefreshProp
     
     setIsDelisting(prev => ({ ...prev, [listHeroId]: true }));
     
-    const tx = delist(packageId, listHeroId, adminCapId);
+    const tx = delist(String(packageId), listHeroId, adminCapId);
     signAndExecute(
       { transaction: tx },
       {
@@ -130,7 +130,7 @@ export default function SharedObjects({ refreshKey, setRefreshKey }: RefreshProp
     
     setIsChangingPrice(prev => ({ ...prev, [listHeroId]: true }));
     
-    const tx = changePrice(packageId, listHeroId, price, adminCapId);
+    const tx = changePrice(String(packageId), listHeroId, price, adminCapId);
     signAndExecute(
       { transaction: tx },
       {

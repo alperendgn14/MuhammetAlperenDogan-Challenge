@@ -105,7 +105,7 @@ export function OwnedObjects({ refreshKey, setRefreshKey }: RefreshProps) {
 
     setIsListing((prev) => ({ ...prev, [heroId]: true }));
 
-    const tx = listHero(packageId, heroId, price);
+    const tx = listHero(String(packageId), heroId, price);
     signAndExecute(
       { transaction: tx },
       {
@@ -134,7 +134,7 @@ export function OwnedObjects({ refreshKey, setRefreshKey }: RefreshProps) {
 
     setIsCreatingBattle((prev) => ({ ...prev, [heroId]: true }));
 
-    const tx = createArena(packageId, heroId);
+    const tx = createArena(String(packageId), heroId);
     signAndExecute(
       { transaction: tx },
       {

@@ -10,7 +10,7 @@ export const transferHero = (heroId: string, to: string) => {
     to
   );
     
-  // Fazladan parantez buradan kaldırıldı
+
 
   return tx;
 };

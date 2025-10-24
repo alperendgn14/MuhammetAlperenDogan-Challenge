@@ -13,7 +13,7 @@ export const transferAdminCap = (adminCapId: string, to: string) => {
 
     tx.transferObjects(
       [tx.object(adminCapId)],
-      to
+      to,
     );
   
   return tx;

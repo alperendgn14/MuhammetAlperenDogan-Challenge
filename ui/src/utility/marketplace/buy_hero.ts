@@ -27,7 +27,7 @@ export const buyHero = (packageId: string, listHeroId: string, priceInSui: strin
         tx.object(listHeroId),
         paymentCoin,
       ],
-    })
+    });
 
     
   return tx;

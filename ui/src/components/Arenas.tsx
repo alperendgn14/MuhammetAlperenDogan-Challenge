@@ -93,7 +93,7 @@ export default function Arenas({ refreshKey, setRefreshKey }: RefreshProps) {
 
     setIsBattling((prev) => ({ ...prev, [`${arenaId}_${heroId}`]: true }));
 
-    const tx = battle(packageId, heroId, arenaId);
+    const tx = battle(String(packageId), heroId, arenaId);
     signAndExecute(
       { transaction: tx },
       {
